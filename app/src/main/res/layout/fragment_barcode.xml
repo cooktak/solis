@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+             xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:tools="http://schemas.android.com/tools"
+             android:layout_width="match_parent"
+             android:layout_height="match_parent"
+             tools:context=".ui.Main.Barcode.BarcodeFragment">
+    <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+        <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Barcode"
+                android:textStyle="normal"
+                android:textSize="25sp"
+                android:textAppearance="@style/TextAppearance.AppCompat.Body1" app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent" android:layout_marginBottom="8dp"
+                app:layout_constraintBottom_toTopOf="@+id/barcode_layout" android:layout_marginTop="8dp"
+                app:layout_constraintTop_toTopOf="parent" app:layout_constraintHorizontal_bias="0.498"
+                app:layout_constraintVertical_bias="0.241"/>
+        <LinearLayout
+                android:id="@+id/barcode_layout"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintStart_toStartOf="parent"
+                android:layout_marginTop="8dp"
+                app:layout_constraintTop_toTopOf="parent"
+                android:layout_marginBottom="8dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                android:layout_marginEnd="24dp" app:layout_constraintEnd_toEndOf="parent"
+                android:layout_marginStart="24dp">
+
+            <com.journeyapps.barcodescanner.DecoratedBarcodeView
+                    android:id="@+id/zxing_barcode_scanner"
+                    android:layout_width="300dp"
+                    android:layout_height="300dp"
+                    app:zxing_scanner_layout="@layout/custom_barcode_scanner">
+            </com.journeyapps.barcodescanner.DecoratedBarcodeView>
+        </LinearLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</FrameLayout>

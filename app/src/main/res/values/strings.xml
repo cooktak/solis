@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">CookTak</string>
+
+    <string name="register">
+        <u>로그인</u>
+    </string>
+</resources>

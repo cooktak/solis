@@ -1,0 +1,33 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+        <!-- Customize your theme here. -->
+        <item name="android:windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorPrimaryDark</item>
+    </style>
+
+    <style name="SplashTheme" parent="Theme.AppCompat.NoActionBar">
+        <item name="android:windowBackground">@drawable/activity_splash</item>
+    </style>
+
+    <style name="NoTitleTheme" parent="Theme.AppCompat.NoActionBar"/>
+
+    <style name="TabTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+        <item name="windowNoTitle">false</item>
+        <item name="windowActionBar">true</item>
+
+        <item name="colorPrimary">#FFFFFF</item>    <!-- 배경 -->
+
+        <item name="android:textColorPrimary">@color/colorPrimaryDark</item> <!-- 선택된 텍스트 색 -->
+        <item name="android:textColorSecondary">@color/colorPrimaryDark</item> <!-- 탭바 텍스트 -->
+
+        <item name="colorAccent">@color/colorPrimaryDark</item>     <!-- 막대기 색 -->
+    </style>
+
+    <style name="Material" parent="Theme.MaterialComponents.Light.DarkActionBar"/>
+</resources>

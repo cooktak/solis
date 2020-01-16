@@ -1,0 +1,292 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/colorPrimaryDark"
+        tools:context=".ui.Sign.SignUpActivity">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+        <ImageView
+                android:id="@+id/image_view"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:src="@drawable/x05_cooktak_logo"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+                android:id="@+id/tex_cooktak"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="회원가입"
+                android:textAppearance="@style/TextAppearance.AppCompat.Large"
+                android:textColor="#FFFFFF"
+                app:layout_constraintEnd_toEndOf="@+id/image_view"
+                app:layout_constraintStart_toStartOf="@+id/image_view"
+                app:layout_constraintTop_toBottomOf="@+id/image_view" />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/layout_constraint"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="16dp"
+                android:background="#FFFFFF"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tex_cooktak"
+                app:layout_constraintVertical_bias="0.5">
+
+            <TextView
+                    android:id="@+id/tex_email_register"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="46dp"
+                    android:text="이메일"
+                    android:textColor="@color/colorPrimaryDark"
+                    android:textStyle="bold"
+                    app:layout_constraintBottom_toTopOf="@+id/edt_email_register"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+            <EditText
+                    android:id="@+id/edt_email_register"
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:layout_marginStart="46dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginEnd="46dp"
+                    android:hint="이메일을 입력해주세요."
+                    android:inputType="textEmailAddress"
+                    app:layout_constraintBottom_toTopOf="@id/tex_pwd_register"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHeight_max="55dp"
+                    app:layout_constraintHeight_min="45dp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/tex_email_register" />
+
+            <TextView
+                    android:id="@+id/tex_pwd_register"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="46dp"
+                    android:layout_marginTop="10dp"
+                    android:text="비밀번호"
+                    android:textColor="@color/colorPrimaryDark"
+                    android:textStyle="bold"
+                    app:layout_constraintBottom_toTopOf="@id/edt_pwd_register"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/edt_email_register" />
+
+            <EditText
+                    android:id="@+id/edt_pwd_register"
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:layout_marginStart="46dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginEnd="46dp"
+                    android:hint="비밀번호를 입력해주세요."
+                    android:inputType="textPassword"
+                    android:maxLength="20"
+                    app:layout_constraintBottom_toTopOf="@+id/tex_pwdInfo_register"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHeight_max="55dp"
+                    app:layout_constraintHeight_min="45dp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/tex_pwd_register" />
+
+            <TextView
+                    android:id="@+id/tex_pwdInfo_register"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="46dp"
+                    android:text="  * 비밀번호 자릿수 최소 8 ~ 최대 20자리"
+                    android:textColor="@color/colorPrimaryDark"
+                    app:layout_constraintBottom_toTopOf="@id/tex_conPwd_register"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/edt_pwd_register" />
+
+            <TextView
+                    android:id="@+id/tex_conPwd_register"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="46dp"
+                    android:layout_marginTop="10dp"
+                    android:text="비밀번호 확인"
+                    android:textColor="@color/colorPrimaryDark"
+                    android:textStyle="bold"
+                    app:layout_constraintBottom_toTopOf="@+id/edt_conPwd_register"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/tex_pwdInfo_register" />
+
+            <EditText
+                    android:id="@+id/edt_conPwd_register"
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:layout_marginStart="46dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginEnd="46dp"
+                    android:hint="비밀번호를 다시 입력해주세요."
+                    android:inputType="textPassword"
+                    android:maxLength="20"
+                    app:layout_constraintBottom_toTopOf="@id/tex_nick_register"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHeight_max="55dp"
+                    app:layout_constraintHeight_min="45dp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/tex_conPwd_register" />
+
+            <TextView
+                    android:id="@+id/tex_nick_register"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="46dp"
+                    android:layout_marginTop="10dp"
+                    android:text="닉네임"
+                    android:textColor="@color/colorPrimaryDark"
+                    android:textStyle="bold"
+                    app:layout_constraintBottom_toTopOf="@id/layout_nick_register"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/edt_conPwd_register" />
+
+            <LinearLayout
+                    android:id="@+id/layout_nick_register"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginEnd="46dp"
+                    android:orientation="horizontal"
+                    app:layout_constraintBottom_toTopOf="@id/tex_nickInfo_register"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/tex_nick_register">
+
+                <EditText
+                        android:id="@+id/edt_nick_register"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="46dp"
+                        android:layout_weight="7"
+                        android:hint="닉네임을 입력해주세요."
+                        android:inputType="textPersonName"
+                        android:maxLength="12" />
+
+                <Button
+                        android:id="@+id/btn_nick_register"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:hint="중복 확인" />
+            </LinearLayout>
+
+            <TextView
+                    android:id="@+id/tex_nickInfo_register"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="46dp"
+                    android:text=" * 닉네임은 최소 2자리 ~ 최대 12자리"
+                    android:textColor="@color/colorPrimaryDark"
+                    app:layout_constraintBottom_toTopOf="@id/tex_age_register"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/layout_nick_register" />
+
+            <TextView
+                    android:id="@+id/tex_age_register"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="46dp"
+                    android:layout_marginTop="10dp"
+                    android:text="생년월일"
+                    android:textColor="@color/colorPrimaryDark"
+                    android:textStyle="bold"
+                    app:layout_constraintBottom_toTopOf="@id/date_birth_register"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/tex_nickInfo_register" />
+
+            <DatePicker
+                    android:id="@+id/date_birth_register"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="46dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginEnd="46dp"
+                    android:calendarViewShown="false"
+                    android:datePickerMode="spinner"
+                    app:layout_constraintBottom_toTopOf="@id/radio_group_register"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.0"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/tex_age_register" />
+
+            <TextView
+                    android:id="@+id/tex_gender_register"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="46dp"
+                    android:layout_marginTop="10dp"
+                    android:text="성별"
+                    android:textColor="@color/colorPrimaryDark"
+                    android:textStyle="bold"
+                    app:layout_constraintBottom_toTopOf="@id/radio_group_register"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/date_birth_register" />
+
+            <RadioGroup
+                    android:id="@+id/radio_group_register"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="46dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginEnd="46dp"
+                    android:orientation="horizontal"
+                    app:layout_constraintBottom_toTopOf="@id/btn_check_register"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/tex_gender_register">
+
+                <RadioGroup
+                        android:id="@+id/radio_btn_man"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="5dp"
+                        android:backgroundTint="@color/colorPrimaryDark"
+                        android:text="남성" />
+
+                <RadioButton
+                        android:id="@+id/radio_btn_woman"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="5dp"
+                        android:backgroundTint="@color/colorPrimaryDark"
+                        android:text="여성" />
+
+                <RadioButton
+                        android:id="@+id/radio_btn_unknown"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="5dp"
+                        android:backgroundTint="@color/colorPrimaryDark"
+                        android:text="공개하지 않음" />
+            </RadioGroup>
+
+            <Button
+                    android:id="@+id/btn_check_register"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="46dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginEnd="46dp"
+                    android:text="회원가입"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/radio_group_register" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>
