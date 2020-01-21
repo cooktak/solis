@@ -5,8 +5,12 @@ import android.app.Activity
 import android.content.Intent
 import android.os.Bundle
 import android.util.Log
+import android.view.LayoutInflater
+import android.view.View
+import android.view.ViewGroup
 import android.widget.Toast
 import androidx.fragment.app.Fragment
+import com.example.cooktak.R
 import com.google.zxing.integration.android.IntentIntegrator
 import com.journeyapps.barcodescanner.CaptureManager
 
@@ -14,16 +18,14 @@ import com.journeyapps.barcodescanner.CaptureManager
 class BarcodeFragment : Fragment() {
     lateinit var captureManager: CaptureManager
 
-    override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
-    }
+    override fun onCreateView(
+        inflater: LayoutInflater,
+        container: ViewGroup?,
+        savedInstanceState: Bundle?
+    ): View? {
+        val v = inflater.inflate(R.layout.fragment_barcode, container, false)
 
-    override fun onResume() {
-        super.onResume()
-
-        /* val integrator : IntentIntegrator = IntentIntegrator(this.activity)
-         integrator.captureActivity = CustomScannerActivity::class.java
-         integrator.initiateScan()*/
+        return v
     }
 
     @SuppressLint("MissingSuperCall")

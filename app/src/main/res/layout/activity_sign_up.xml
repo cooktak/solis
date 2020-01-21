@@ -25,7 +25,7 @@
                 android:id="@+id/tex_cooktak"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="회원가입"
+                android:text="@string/text_register"
                 android:textAppearance="@style/TextAppearance.AppCompat.Large"
                 android:textColor="#FFFFFF"
                 app:layout_constraintEnd_toEndOf="@+id/image_view"
@@ -50,7 +50,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="46dp"
-                    android:text="이메일"
+                    android:text="@string/text_email"
                     android:textColor="@color/colorPrimaryDark"
                     android:textStyle="bold"
                     app:layout_constraintBottom_toTopOf="@+id/edt_email_register"
@@ -64,7 +64,7 @@
                     android:layout_marginStart="46dp"
                     android:layout_marginTop="10dp"
                     android:layout_marginEnd="46dp"
-                    android:hint="이메일을 입력해주세요."
+                    android:hint="@string/text_emailHint"
                     android:inputType="textEmailAddress"
                     app:layout_constraintBottom_toTopOf="@id/tex_pwd_register"
                     app:layout_constraintEnd_toEndOf="parent"
@@ -79,7 +79,7 @@
                     android:layout_height="wrap_content"
                     android:layout_marginStart="46dp"
                     android:layout_marginTop="10dp"
-                    android:text="비밀번호"
+                    android:text="@string/text_password"
                     android:textColor="@color/colorPrimaryDark"
                     android:textStyle="bold"
                     app:layout_constraintBottom_toTopOf="@id/edt_pwd_register"
@@ -93,7 +93,7 @@
                     android:layout_marginStart="46dp"
                     android:layout_marginTop="10dp"
                     android:layout_marginEnd="46dp"
-                    android:hint="비밀번호를 입력해주세요."
+                    android:hint="@string/text_passHint"
                     android:inputType="textPassword"
                     android:maxLength="20"
                     app:layout_constraintBottom_toTopOf="@+id/tex_pwdInfo_register"
@@ -108,7 +108,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="46dp"
-                    android:text="  * 비밀번호 자릿수 최소 8 ~ 최대 20자리"
+                    android:text="@string/text_pass_notice"
                     android:textColor="@color/colorPrimaryDark"
                     app:layout_constraintBottom_toTopOf="@id/tex_conPwd_register"
                     app:layout_constraintStart_toStartOf="parent"
@@ -120,7 +120,7 @@
                     android:layout_height="wrap_content"
                     android:layout_marginStart="46dp"
                     android:layout_marginTop="10dp"
-                    android:text="비밀번호 확인"
+                    android:text="@string/text_checkPass"
                     android:textColor="@color/colorPrimaryDark"
                     android:textStyle="bold"
                     app:layout_constraintBottom_toTopOf="@+id/edt_conPwd_register"
@@ -134,7 +134,7 @@
                     android:layout_marginStart="46dp"
                     android:layout_marginTop="10dp"
                     android:layout_marginEnd="46dp"
-                    android:hint="비밀번호를 다시 입력해주세요."
+                    android:hint="@string/text_confirmPass"
                     android:inputType="textPassword"
                     android:maxLength="20"
                     app:layout_constraintBottom_toTopOf="@id/tex_nick_register"
@@ -150,7 +150,7 @@
                     android:layout_height="wrap_content"
                     android:layout_marginStart="46dp"
                     android:layout_marginTop="10dp"
-                    android:text="닉네임"
+                    android:text="@string/text_nick"
                     android:textColor="@color/colorPrimaryDark"
                     android:textStyle="bold"
                     app:layout_constraintBottom_toTopOf="@id/layout_nick_register"
@@ -175,7 +175,7 @@
                         android:layout_height="wrap_content"
                         android:layout_marginStart="46dp"
                         android:layout_weight="7"
-                        android:hint="닉네임을 입력해주세요."
+                        android:hint="@string/text_nickHint"
                         android:inputType="textPersonName"
                         android:maxLength="12" />
 
@@ -183,7 +183,7 @@
                         android:id="@+id/btn_nick_register"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:hint="중복 확인" />
+                        android:hint="@string/text_checkOverlap" />
             </LinearLayout>
 
             <TextView
@@ -191,7 +191,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="46dp"
-                    android:text=" * 닉네임은 최소 2자리 ~ 최대 12자리"
+                    android:text="@string/text_notice_nick"
                     android:textColor="@color/colorPrimaryDark"
                     app:layout_constraintBottom_toTopOf="@id/tex_age_register"
                     app:layout_constraintStart_toStartOf="parent"
@@ -203,7 +203,7 @@
                     android:layout_height="wrap_content"
                     android:layout_marginStart="46dp"
                     android:layout_marginTop="10dp"
-                    android:text="생년월일"
+                    android:text="@string/text_birth"
                     android:textColor="@color/colorPrimaryDark"
                     android:textStyle="bold"
                     app:layout_constraintBottom_toTopOf="@id/date_birth_register"
@@ -231,7 +231,7 @@
                     android:layout_height="wrap_content"
                     android:layout_marginStart="46dp"
                     android:layout_marginTop="10dp"
-                    android:text="성별"
+                    android:text="@string/text_gender"
                     android:textColor="@color/colorPrimaryDark"
                     android:textStyle="bold"
                     app:layout_constraintBottom_toTopOf="@id/radio_group_register"
@@ -251,29 +251,27 @@
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toBottomOf="@+id/tex_gender_register">
 
-                <RadioGroup
+                <RadioButton
                         android:id="@+id/radio_btn_man"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_margin="5dp"
-                        android:backgroundTint="@color/colorPrimaryDark"
-                        android:text="남성" />
+                        android:checked="true"
+                        android:text="@string/text_male" />
 
                 <RadioButton
                         android:id="@+id/radio_btn_woman"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_margin="5dp"
-                        android:backgroundTint="@color/colorPrimaryDark"
-                        android:text="여성" />
+                        android:text="@string/text_female" />
 
                 <RadioButton
                         android:id="@+id/radio_btn_unknown"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_margin="5dp"
-                        android:backgroundTint="@color/colorPrimaryDark"
-                        android:text="공개하지 않음" />
+                        android:text="@string/text_unknown" />
             </RadioGroup>
 
             <Button
@@ -283,7 +281,7 @@
                     android:layout_marginStart="46dp"
                     android:layout_marginTop="10dp"
                     android:layout_marginEnd="46dp"
-                    android:text="회원가입"
+                    android:text="@string/text_register"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toBottomOf="@+id/radio_group_register" />

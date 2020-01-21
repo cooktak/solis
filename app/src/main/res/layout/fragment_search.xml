@@ -18,7 +18,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginStart="8dp"
                 android:layout_marginTop="16dp"
-                android:text="Search"
+                android:text="@string/text_search_title"
                 android:textAppearance="@style/TextAppearance.AppCompat.Large"
                 android:textColor="#585858"
                 app:layout_constraintEnd_toEndOf="parent"
@@ -45,14 +45,15 @@
                     android:layout_height="wrap_content"
                     android:layout_weight="9"
                     android:background="#E4E4e4"
-                    android:drawableLeft="@drawable/ic_search_black_24dp"
-                    android:hint="재료 또는 음식명 검색, #을 통해 태그 검색 가능 {ex} #삼각김밥"
+                    android:drawableStart="@drawable/ic_search_black_24dp"
+                    android:hint="@string/text_searchHint"
                     android:imeOptions="actionSearch"
                     android:inputType="textPersonName"
                     android:padding="3dp"
                     android:textColor="#808080"
                     android:textColorHint="#808080"
-                    android:textSize="10sp" />
+                    android:textSize="10sp"
+                    tools:ignore="SmallSp" />
         </LinearLayout>
 
         <com.google.android.flexbox.FlexboxLayout

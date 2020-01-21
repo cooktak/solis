@@ -10,14 +10,16 @@
     <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:padding="5dp"
-            android:orientation="vertical">
+            android:orientation="vertical"
+            android:padding="5dp">
 
         <TextView
                 android:id="@+id/tex_content_item"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:background="#E4E4E4"
+                android:paddingStart="5dp"
+                android:paddingEnd="1dp"
                 android:text="Testing"
                 android:textAppearance="@style/TextAppearance.AppCompat.Large" />
 

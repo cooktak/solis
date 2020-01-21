@@ -14,6 +14,7 @@ import com.example.cooktak.R
 import com.example.cooktak.model.ItemModel
 import com.example.cooktak.model.TitleModel
 import kotlinx.android.synthetic.main.fragment_community.view.*
+import org.jetbrains.anko.image
 
 
 class CommunityFragment : Fragment() {
@@ -70,10 +71,12 @@ class CommunityFragment : Fragment() {
             flag = !flag
 
             if (flag) {
+                view.btn_category_recommend.setImageResource(R.drawable.baseline_view_module_black_48)
                 view.recycler_recommend.layoutManager = GridLayoutManager(view.context, 3)
                 view.recycler_recommend.setHasFixedSize(true)
                 view.recycler_recommend.adapter = GridRecyclerViewAdapter(view.context, viewList)
             } else {
+                view.btn_category_recommend.setImageResource(R.drawable.baseline_view_list_black_48)
                 view.recycler_recommend.layoutManager = LinearLayoutManager(view.context)
                 view.recycler_recommend.adapter = ExpandableAdapter(viewList)
             }

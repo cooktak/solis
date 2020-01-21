@@ -1,7 +1,41 @@
 <resources>
+    <!-- Title -->
     <string name="app_name">CookTak</string>
+    <string name="text_barcode_title">Barcode</string>
+    <string name="text_search_title">Search</string>
+    <string name="text_community_title">Community</string>
 
-    <string name="register">
-        <u>로그인</u>
-    </string>
+    <!-- Common -->
+    <string name="text_id">ID</string>
+    <string name="text_pass">PW</string>
+    <string name="text_email">이메일</string>
+    <string name="text_password">비밀번호</string>
+    <string name="text_nick">닉네임</string>
+    <string name="text_login">로그인</string>
+    <string name="text_register">회원가입</string>
+    <string name="text_birth">생년월일</string>
+    <string name="text_gender">성별</string>
+    <string name="text_male">남성</string>
+    <string name="text_female">여성</string>
+    <string name="text_unknown">공개하지 않음</string>
+
+    <!-- Write -->
+    <string name="text_emailHint">이메일을 입력해주세요.</string>
+    <string name="text_passHint">비밀번호를 입력해주세요.</string>
+    <string name="text_nickHint">닉네임을 입력해주세요.</string>
+    <string name="text_searchHint">재료 또는 음식명 검색, #을 통해 태그 검색 가능 {ex} #삼각김밥</string>
+
+    <!-- Check -->
+    <string name="text_checkOverlap">중복 확인</string>
+    <string name="text_checkPass">비밀번호 확인</string>
+    <string name="text_confirmPass">비밀번호를 다시 입력해주세요.</string>
+
+    <!-- Notice -->
+    <string name="text_pass_notice">* 비밀번호 자릿수 최소 8 ~ 최대 20자리</string>
+    <string name="text_notice_nick">* 닉네임은 최소 2자리 ~ 최대 12자리</string>
+
+    <!-- Etc -->
+    <string name="text_barcode_capture">바코드 촬영</string>
+
+
 </resources>

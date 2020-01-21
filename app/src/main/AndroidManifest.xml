@@ -14,28 +14,42 @@
             android:supportsRtl="true"
             android:theme="@style/AppTheme"
             tools:ignore="GoogleAppIndexingWarning">
-        <activity android:name=".ui.Main.Community.CreateActivity" />
+        <activity
+                android:name=".ui.Main.Community.CreateActivity"
+                tools:ignore="InnerclassSeparator" />
         <activity
                 android:name=".ui.Main.Barcode.AnyOrientationCaptureActivity"
                 android:screenOrientation="fullSensor"
                 android:stateNotNeeded="true"
                 android:theme="@style/zxing_CaptureTheme"
-                android:windowSoftInputMode="stateAlwaysHidden" />
-        <activity android:name=".ui.Sign.SignUpActivity" />
-        <activity android:name=".ui.Sign.SignInActivity" />
-        <activity android:name=".ui.Sign.SelectSignActivity" />
+                android:windowSoftInputMode="stateAlwaysHidden"
+                tools:ignore="InnerclassSeparator" />
+        <activity
+                android:name=".ui.Sign.SignUpActivity"
+                tools:ignore="InnerclassSeparator" />
+        <activity
+                android:name=".ui.Sign.SignInActivity"
+                tools:ignore="InnerclassSeparator" />
+        <activity
+                android:name=".ui.Sign.SelectSignActivity"
+                tools:ignore="InnerclassSeparator" />
         <activity
                 android:name=".ui.Splash.SplashActivity"
                 android:screenOrientation="portrait"
-                android:theme="@style/SplashTheme">
+                android:theme="@style/SplashTheme"
+                tools:ignore="InnerclassSeparator">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".ui.Main.MainActivity" />
-        <activity android:name=".ui.Main.Barcode.CustomScannerActivity" />
+        <activity
+                android:name=".ui.Main.MainActivity"
+                tools:ignore="InnerclassSeparator" />
+        <activity
+                android:name=".ui.Main.Barcode.CustomScannerActivity"
+                tools:ignore="InnerclassSeparator" />
     </application>
 
 </manifest>

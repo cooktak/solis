@@ -1,54 +1,54 @@
-<androidx.constraintlayout.widget.ConstraintLayout
-        xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
         xmlns:app="http://schemas.android.com/apk/res-auto"
         xmlns:tools="http://schemas.android.com/tools"
-        android:layout_margin="5dp"
-        android:background="@drawable/item_round_cm"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="wrap_content"
+        android:layout_margin="5dp"
+        android:background="@drawable/item_round_cm">
 
     <ImageView
             android:id="@+id/img_item1"
             android:layout_width="0dp"
             android:layout_height="0dp"
-            android:layout_marginEnd="8dp"
-            android:layout_marginStart="8dp"
-            android:layout_marginTop="8dp"
             android:layout_margin="10dp"
-            android:scaleType="centerCrop"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="16dp"
             android:background="@drawable/rounded_imageview"
+            android:scaleType="center"
             app:layout_constraintDimensionRatio="16:9"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"/>
+            app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
             android:id="@+id/tex_title1"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginEnd="8dp"
             android:layout_marginStart="10dp"
             android:layout_marginTop="8dp"
+            android:layout_marginEnd="8dp"
             android:background="@drawable/rounded_title"
-            android:textSize="13sp"
-            android:padding="2dp"
+            android:padding="3dp"
+            android:textSize="15sp"
             android:textStyle="bold"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/img_item1"
-            tools:text="Title"/>
+            tools:text="Title" />
 
     <TextView
             android:id="@+id/tex_sub1"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginEnd="10dp"
-            android:background="@drawable/rounded_title"
-            android:textSize="10sp"
             android:layout_marginBottom="5dp"
-            android:padding="2dp"
+            android:background="@drawable/rounded_title"
+            android:padding="3dp"
+            android:textSize="12sp"
+            app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/tex_title1"
-            tools:text="Subtitle" tools:ignore="SmallSp"
-            app:layout_constraintBottom_toBottomOf="parent"/>
+            tools:ignore="SmallSp"
+            tools:text="Subtitle" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

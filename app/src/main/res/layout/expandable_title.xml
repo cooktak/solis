@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginStart="15dp"
@@ -45,7 +46,7 @@
                     android:background="@drawable/rounded_title"
                     android:padding="2dp"
                     android:text="Title"
-                    android:textSize="13dp"
+                    android:textSize="13sp"
                     android:textStyle="bold" />
 
             <TextView
@@ -57,7 +58,8 @@
                     android:background="@drawable/rounded_title"
                     android:padding="2dp"
                     android:text="SubTitle"
-                    android:textSize="10dp" />
+                    android:textSize="10sp"
+                    tools:ignore="SmallSp" />
         </LinearLayout>
 
         <ImageView

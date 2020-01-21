@@ -5,7 +5,6 @@ import androidx.fragment.app.FragmentActivity
 import com.example.cooktak.R
 import com.example.cooktak.util.BackPressCloseHandler
 import com.journeyapps.barcodescanner.CaptureManager
-import kotlinx.android.synthetic.main.fragment_barcode.*
 
 
 class CustomScannerActivity : FragmentActivity() {
@@ -19,13 +18,7 @@ class CustomScannerActivity : FragmentActivity() {
         setContentView(R.layout.fragment_barcode)
 
         switchFlashlightButtonCheck = true
-
         backPressCloseHandler = BackPressCloseHandler(this)
-
-
-        capture = CaptureManager(this, zxing_barcode_scanner)
-        capture.initializeFromIntent(intent, savedInstanceState)
-        capture.decode()
     }
 
     override fun onResume() {

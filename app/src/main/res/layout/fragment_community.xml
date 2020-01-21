@@ -23,24 +23,42 @@
                 app:layout_constraintTop_toTopOf="parent"
                 app:layout_constraintVertical_weight="1">
 
-            <Button
-                    android:id="@+id/btn_person_recommend"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content" />
+            <ImageView
+                    android:id="@+id/btn_bookmark_recommend"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="24dp"
+                    android:layout_weight="1"
+                    android:src="@drawable/baseline_bookmark_black_18dp" />
+
+            <View
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="2" />
 
             <TextView
-                    android:layout_width="wrap_content"
+                    android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="20dp"
                     android:layout_marginEnd="20dp"
-                    android:text="Community"
+                    android:layout_weight="5"
+                    android:gravity="center"
+                    android:text="@string/text_community_title"
                     android:textAppearance="@style/TextAppearance.AppCompat.Large" />
 
-            <Button
-                    android:id="@+id/btn_category_recommend"
-                    android:layout_width="wrap_content"
+            <View
+                    android:layout_width="0dp"
                     android:layout_height="wrap_content"
-                    tools:text="Change" />
+                    android:layout_weight="2" />
+
+
+            <ImageView
+                    android:id="@+id/btn_category_recommend"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="24dp"
+                    android:layout_weight="1"
+                    android:src="@drawable/baseline_view_list_black_48" />
 
         </LinearLayout>
 
@@ -64,6 +82,7 @@
                 android:clickable="true"
                 android:src="@drawable/ic_create_black_24dp"
                 app:layout_constraintBottom_toBottomOf="@+id/recycler_recommend"
-                app:layout_constraintEnd_toEndOf="@+id/recycler_recommend" />
+                app:layout_constraintEnd_toEndOf="@+id/recycler_recommend"
+                android:focusable="true" />
     </androidx.constraintlayout.widget.ConstraintLayout>
 </FrameLayout>
