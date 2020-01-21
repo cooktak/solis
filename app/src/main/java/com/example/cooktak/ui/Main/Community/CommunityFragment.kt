@@ -13,8 +13,8 @@ import com.example.cooktak.Adapter.GridRecyclerViewAdapter
 import com.example.cooktak.R
 import com.example.cooktak.model.ItemModel
 import com.example.cooktak.model.TitleModel
+import kotlinx.android.synthetic.main.expandable_title.view.*
 import kotlinx.android.synthetic.main.fragment_community.view.*
-import org.jetbrains.anko.image
 
 
 class CommunityFragment : Fragment() {
@@ -29,12 +29,13 @@ class CommunityFragment : Fragment() {
     ): View? {
         val view = inflater.inflate(R.layout.fragment_community, container, false)
 
-        var flag = false
+        var expandFlag = false
+        var starFlag = false
         val viewList: ArrayList<TitleModel> = arrayListOf()
 
         val arr: ArrayList<ItemModel> = arrayListOf()
         arr.add(ItemModel("abac"))
-        viewList.add(TitleModel(R.drawable.example, "test1", "test1", arr))
+        viewList.add(TitleModel(R.drawable.example, "까르보나라", "맛있는 크림스파게티~", arr))
 
         val arr1: ArrayList<ItemModel> = arrayListOf()
         arr1.add(ItemModel("adad"))
@@ -68,9 +69,9 @@ class CommunityFragment : Fragment() {
         view.recycler_recommend.adapter = ExpandableAdapter(viewList)
 
         view.btn_category_recommend.setOnClickListener {
-            flag = !flag
+            expandFlag = !expandFlag
 
-            if (flag) {
+            if (expandFlag) {
                 view.btn_category_recommend.setImageResource(R.drawable.baseline_view_module_black_48)
                 view.recycler_recommend.layoutManager = GridLayoutManager(view.context, 3)
                 view.recycler_recommend.setHasFixedSize(true)
