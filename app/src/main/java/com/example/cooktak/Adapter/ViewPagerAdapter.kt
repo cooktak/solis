@@ -8,13 +8,14 @@ import com.example.cooktak.ui.Main.Barcode.BarcodeFragment
 import com.example.cooktak.ui.Main.Community.CommunityFragment
 import com.example.cooktak.ui.Main.SearchFragment
 
-class ViewPagerAdapter(fm: FragmentManager) : FragmentStatePagerAdapter(fm) {
-    override fun getItem(p0: Int): Fragment? {
+class ViewPagerAdapter(fm: FragmentManager) :
+    FragmentStatePagerAdapter(fm, BEHAVIOR_RESUME_ONLY_CURRENT_FRAGMENT) {
+    override fun getItem(p0: Int): Fragment {
         return when (p0 % 3) {
             0 -> BarcodeFragment()
             1 -> SearchFragment()
             2 -> CommunityFragment()
-            else -> null
+            else -> null as Fragment
         }
     }
 
