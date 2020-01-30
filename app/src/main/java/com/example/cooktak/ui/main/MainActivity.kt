@@ -2,11 +2,13 @@ package com.example.cooktak.ui.main
 
 import android.content.pm.ActivityInfo
 import android.os.Bundle
+import androidx.appcompat.app.ActionBar
 import androidx.appcompat.app.AppCompatActivity
-import com.example.cooktak.adapter.ViewPagerAdapter
 import com.example.cooktak.R
+import com.example.cooktak.adapter.ViewPagerAdapter
 import com.example.cooktak.util.BackPressCloseHandler
 import kotlinx.android.synthetic.main.activity_main.*
+import org.jetbrains.anko.toast
 
 class MainActivity : AppCompatActivity() {
     private lateinit var back: BackPressCloseHandler
@@ -15,6 +17,15 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
         requestedOrientation = ActivityInfo.SCREEN_ORIENTATION_PORTRAIT
+        setSupportActionBar(toolbar)
+
+        val actionBar: ActionBar = this.supportActionBar!!
+        actionBar.setDisplayShowCustomEnabled(true)
+        actionBar.setDisplayShowTitleEnabled(false)
+
+        btn_settings.setOnClickListener {
+            toast("Settings")
+        }
 
         back = BackPressCloseHandler(this)
 

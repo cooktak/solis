@@ -34,9 +34,15 @@
     <string name="text_pass_notice">* 비밀번호 자릿수 최소 8 ~ 최대 20자리</string>
     <string name="text_notice_nick">* 닉네임은 최소 2자리 ~ 최대 12자리</string>
 
+    <!-- Tag -->
+    <string name="text_tag_down">추천 태그 ▲</string>
+    <string name="text_tag_up">추천 태그 ▼</string>
+
     <!-- Etc -->
     <string name="text_barcode_capture">바코드 촬영</string>
     <string name="text_barcode_info">바코드를 화면 중앙에 맞춰주세요.</string>
     <string name="text_start_to_guest">게스트로 시작하려면 터치</string>
     <string name="text_description_logo">logo</string>
+    <string name="text_search_result">검색 결과</string>
+
 </resources>
