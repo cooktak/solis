@@ -1,4 +1,4 @@
-package com.example.cooktak.ui.Main.Barcode
+package com.example.cooktak.ui.main.barcode
 
 import com.journeyapps.barcodescanner.CaptureActivity
 

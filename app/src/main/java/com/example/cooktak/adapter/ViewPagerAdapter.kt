@@ -1,12 +1,12 @@
-package com.example.cooktak.Adapter
+package com.example.cooktak.adapter
 
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.FragmentManager
 import androidx.fragment.app.FragmentStatePagerAdapter
-import com.example.cooktak.ui.Main.Barcode.BarcodeFragment
-import com.example.cooktak.ui.Main.Community.CommunityFragment
-import com.example.cooktak.ui.Main.SearchFragment
+import com.example.cooktak.ui.main.barcode.BarcodeFragment
+import com.example.cooktak.ui.main.community.CommunityFragment
+import com.example.cooktak.ui.main.SearchFragment
 
 class ViewPagerAdapter(fm: FragmentManager) :
     FragmentStatePagerAdapter(fm, BEHAVIOR_RESUME_ONLY_CURRENT_FRAGMENT) {

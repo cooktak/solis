@@ -1,4 +1,4 @@
-package com.example.cooktak.ui.Sign
+package com.example.cooktak.ui.sign
 
 import android.annotation.SuppressLint
 import android.app.Activity

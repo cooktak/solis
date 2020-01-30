@@ -1,4 +1,4 @@
-package com.example.cooktak.ui.Main.Community
+package com.example.cooktak.ui.main.community
 
 import android.content.Intent
 import android.os.Bundle
@@ -8,12 +8,11 @@ import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.LinearLayoutManager
-import com.example.cooktak.Adapter.ExpandableAdapter
-import com.example.cooktak.Adapter.GridRecyclerViewAdapter
+import com.example.cooktak.adapter.ExpandableAdapter
+import com.example.cooktak.adapter.GridRecyclerViewAdapter
 import com.example.cooktak.R
 import com.example.cooktak.model.ItemModel
 import com.example.cooktak.model.TitleModel
-import kotlinx.android.synthetic.main.expandable_title.view.*
 import kotlinx.android.synthetic.main.fragment_community.view.*
 
 
@@ -30,7 +29,6 @@ class CommunityFragment : Fragment() {
         val view = inflater.inflate(R.layout.fragment_community, container, false)
 
         var expandFlag = false
-        var starFlag = false
         val viewList: ArrayList<TitleModel> = arrayListOf()
 
         val arr: ArrayList<ItemModel> = arrayListOf()

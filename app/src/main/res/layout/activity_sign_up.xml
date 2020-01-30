@@ -5,7 +5,7 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:background="@color/colorPrimaryDark"
-        tools:context=".ui.Sign.SignUpActivity">
+        tools:context=".ui.sign.SignUpActivity">
 
     <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
@@ -19,7 +19,8 @@
                 android:src="@drawable/x05_cooktak_logo"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />
+                app:layout_constraintTop_toTopOf="parent"
+                android:contentDescription="@string/text_description_logo" />
 
         <TextView
                 android:id="@+id/tex_cooktak"
@@ -71,7 +72,8 @@
                     app:layout_constraintHeight_max="55dp"
                     app:layout_constraintHeight_min="45dp"
                     app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/tex_email_register" />
+                    app:layout_constraintTop_toBottomOf="@+id/tex_email_register"
+                    android:importantForAutofill="no" />
 
             <TextView
                     android:id="@+id/tex_pwd_register"
@@ -101,7 +103,8 @@
                     app:layout_constraintHeight_max="55dp"
                     app:layout_constraintHeight_min="45dp"
                     app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/tex_pwd_register" />
+                    app:layout_constraintTop_toBottomOf="@+id/tex_pwd_register"
+                    android:importantForAutofill="no" />
 
             <TextView
                     android:id="@+id/tex_pwdInfo_register"
@@ -142,7 +145,8 @@
                     app:layout_constraintHeight_max="55dp"
                     app:layout_constraintHeight_min="45dp"
                     app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/tex_conPwd_register" />
+                    app:layout_constraintTop_toBottomOf="@+id/tex_conPwd_register"
+                    android:importantForAutofill="no" />
 
             <TextView
                     android:id="@+id/tex_nick_register"
@@ -177,7 +181,8 @@
                         android:layout_weight="7"
                         android:hint="@string/text_nickHint"
                         android:inputType="textPersonName"
-                        android:maxLength="12" />
+                        android:maxLength="12"
+                        android:importantForAutofill="no" />
 
                 <Button
                         android:id="@+id/btn_nick_register"

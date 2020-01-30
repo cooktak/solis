@@ -1,8 +1,8 @@
-package com.example.cooktak.ui.Main
+package com.example.cooktak.ui.main
 
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
-import com.example.cooktak.Adapter.ViewPagerAdapter
+import com.example.cooktak.adapter.ViewPagerAdapter
 import com.example.cooktak.R
 import com.example.cooktak.util.BackPressCloseHandler
 import kotlinx.android.synthetic.main.activity_main.*

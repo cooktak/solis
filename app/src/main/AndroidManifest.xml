@@ -7,6 +7,7 @@
 
     <application
             android:allowBackup="true"
+            android:hardwareAccelerated="true"
             android:icon="@mipmap/ic_launcher_cooktak"
             android:label="@string/app_name"
             android:roundIcon="@mipmap/ic_launcher_cooktak_round"
@@ -15,26 +16,26 @@
             android:theme="@style/AppTheme"
             tools:ignore="GoogleAppIndexingWarning">
         <activity
-                android:name=".ui.Main.Community.CreateActivity"
+                android:name=".ui.main.community.CreateActivity"
                 tools:ignore="InnerclassSeparator" />
         <activity
-                android:name=".ui.Main.Barcode.AnyOrientationCaptureActivity"
+                android:name=".ui.main.barcode.AnyOrientationCaptureActivity"
                 android:screenOrientation="fullSensor"
                 android:stateNotNeeded="true"
                 android:theme="@style/zxing_CaptureTheme"
                 android:windowSoftInputMode="stateAlwaysHidden"
                 tools:ignore="InnerclassSeparator" />
         <activity
-                android:name=".ui.Sign.SignUpActivity"
+                android:name=".ui.sign.SignUpActivity"
                 tools:ignore="InnerclassSeparator" />
         <activity
-                android:name=".ui.Sign.SignInActivity"
+                android:name=".ui.sign.SignInActivity"
                 tools:ignore="InnerclassSeparator" />
         <activity
-                android:name=".ui.Sign.SelectSignActivity"
+                android:name=".ui.sign.SelectSignActivity"
                 tools:ignore="InnerclassSeparator" />
         <activity
-                android:name=".ui.Splash.SplashActivity"
+                android:name=".ui.splash.SplashActivity"
                 android:screenOrientation="portrait"
                 android:theme="@style/SplashTheme"
                 tools:ignore="InnerclassSeparator">
@@ -45,10 +46,10 @@
             </intent-filter>
         </activity>
         <activity
-                android:name=".ui.Main.MainActivity"
+                android:name=".ui.main.MainActivity"
                 tools:ignore="InnerclassSeparator" />
         <activity
-                android:name=".ui.Main.Barcode.CustomScannerActivity"
+                android:name=".ui.main.barcode.CustomScannerActivity"
                 tools:ignore="InnerclassSeparator" />
     </application>
 

@@ -1,4 +1,4 @@
-package com.example.cooktak.Adapter
+package com.example.cooktak.adapter
 
 import android.content.Context
 import android.view.LayoutInflater

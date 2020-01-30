@@ -6,7 +6,7 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:background="@color/colorPrimaryDark"
-        tools:context=".ui.Sign.SelectSignActivity">
+        tools:context=".ui.sign.SelectSignActivity">
 
     <LinearLayout
             android:id="@+id/btn_ani_main1"
@@ -56,7 +56,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginBottom="30dp"
-            android:text="게스트로 시작하려면 터치"
+            android:text="@string/text_start_to_guest"
             android:textAppearance="@style/TextAppearance.AppCompat.Medium"
             android:textColor="#FFFFFF"
             app:layout_constraintBottom_toBottomOf="parent"

@@ -5,7 +5,7 @@
         android:id="@+id/frame_recommend"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        tools:context=".ui.Main.Community.CommunityFragment">
+        tools:context=".ui.main.community.CommunityFragment">
 
     <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
@@ -29,7 +29,8 @@
                     android:layout_height="55dp"
                     android:layout_marginStart="24dp"
                     android:layout_weight="1.5"
-                    android:src="@drawable/baseline_bookmark_black_18dp" />
+                    android:src="@drawable/baseline_bookmark_black_18dp"
+                    android:contentDescription="@string/text_description_logo" />
 
             <View
                     android:layout_width="0dp"
@@ -58,7 +59,8 @@
                     android:layout_height="55dp"
                     android:layout_marginEnd="24dp"
                     android:layout_weight="1.5"
-                    android:src="@drawable/baseline_view_list_black_48" />
+                    android:src="@drawable/baseline_view_list_black_48"
+                    android:contentDescription="@string/text_description_logo" />
 
         </LinearLayout>
 

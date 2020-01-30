@@ -36,4 +36,7 @@
 
     <!-- Etc -->
     <string name="text_barcode_capture">바코드 촬영</string>
+    <string name="text_barcode_info">바코드를 화면 중앙에 맞춰주세요.</string>
+    <string name="text_start_to_guest">게스트로 시작하려면 터치</string>
+    <string name="text_description_logo">logo</string>
 </resources>

@@ -1,4 +1,4 @@
-package com.example.cooktak.ui.Main.Community
+package com.example.cooktak.ui.main.community
 
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
