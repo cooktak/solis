@@ -13,8 +13,7 @@ class SplashActivity : Activity() {
         super.onCreate(savedInstanceState)
         requestedOrientation = ActivityInfo.SCREEN_ORIENTATION_PORTRAIT
 
-        val intent = Intent(this, SelectSignActivity::class.java)
-        startActivity(intent)
+        startActivity(Intent(this, SelectSignActivity::class.java))
         finish()
     }
 }

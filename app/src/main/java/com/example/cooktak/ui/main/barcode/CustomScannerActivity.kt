@@ -1,6 +1,6 @@
 package com.example.cooktak.ui.main.barcode
 
-import android.content.pm.ActivityInfo
+import android.content.pm.ActivityInfo.SCREEN_ORIENTATION_PORTRAIT
 import android.os.Bundle
 import android.widget.Toast
 import androidx.fragment.app.FragmentActivity
@@ -18,7 +18,7 @@ class CustomScannerActivity : FragmentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_custom_barcode)
-        requestedOrientation = ActivityInfo.SCREEN_ORIENTATION_PORTRAIT
+        requestedOrientation = SCREEN_ORIENTATION_PORTRAIT
 
         barcodeScannerView = findViewById(R.id.zxing_barcode_scanner)
 

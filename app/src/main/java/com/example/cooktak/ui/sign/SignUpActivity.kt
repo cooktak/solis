@@ -8,6 +8,7 @@ import android.os.Bundle
 import android.util.Log
 import android.widget.DatePicker
 import android.widget.Toast
+import android.widget.Toast.LENGTH_SHORT
 import androidx.appcompat.app.AppCompatActivity
 import com.example.cooktak.R
 import com.example.cooktak.connecter.Connector
@@ -41,7 +42,7 @@ class SignUpActivity : AppCompatActivity() {
         btn_check_register.setOnClickListener {
             val gender = when (radio_group_register.checkedRadioButtonId) {
                 R.id.radio_btn_man -> "m"
-                R.id.radio_btn_woman -> "w"
+                R.id.radio_btn_woman -> "f"
                 R.id.radio_btn_unknown -> "u"
                 else -> "u"
             }
@@ -64,7 +65,10 @@ class SignUpActivity : AppCompatActivity() {
             obj.addProperty("gender", gender)
 
             when (checkSignUp(obj)) {
-                200 -> register(obj)
+                200 -> {
+                    obj.remove("passwordCon")
+                    register(obj)
+                }
                 201 -> toast("공백이 존재합니다.")
                 202 -> toast("비밀번호가 일치하지 않습니다.")
                 203 -> toast("비밀번호에 특수문자 또는 공백이 존재합니다.")
@@ -80,8 +84,8 @@ class SignUpActivity : AppCompatActivity() {
 
     @SuppressLint("SimpleDateFormat")
     private fun formatDate(date: String): String {
-        val setDate = SimpleDateFormat("yyyy-MM-dd").parse(date)
-        val formatPattern = SimpleDateFormat("yyyy-MM-dd'T'HH:mm:ss")
+        val setDate: Date = SimpleDateFormat("yyyy-MM-dd").parse(date)!!
+        val formatPattern = SimpleDateFormat("yyyy-MM-dd'T'HH:mm:ss.SSS'Z'")
         formatPattern.timeZone = TimeZone.getTimeZone("Asia/Seoul")
 
         return formatPattern.format(setDate)
@@ -101,7 +105,7 @@ class SignUpActivity : AppCompatActivity() {
                 ")+"
         val pwPattern = "(.)\\1\\1"
         val pwdPattern = "^(?=.*\\d)(?=.*[a-z]).{8,20}$"
-        val pattern = Regex("[0-9|a-z|A-Z|ㄱ-ㅎ|ㅏ-ㅣ|가-힝]*")
+        val pattern = Regex(getString(R.string.special_pattern))
 
         if (email.isEmpty() || password.isEmpty() || passwordCon.isEmpty())
             return 201      // 공백
@@ -125,12 +129,8 @@ class SignUpActivity : AppCompatActivity() {
         Connector.createApi().registerUser(obj).enqueue(object : Callback<Void> {
             override fun onResponse(call: Call<Void>, response: Response<Void>) {
                 when (response.code()) {
-                    200 -> {
-                        Toast.makeText(
-                            this@SignUpActivity,
-                            "회원가입 성공",
-                            Toast.LENGTH_SHORT
-                        ).show()
+                    201 -> {
+                        Toast.makeText(this@SignUpActivity, "회원가입 성공", LENGTH_SHORT).show()
 
                         val intent =
                             Intent(this@SignUpActivity, SignInActivity::class.java)
@@ -139,23 +139,14 @@ class SignUpActivity : AppCompatActivity() {
                         finish()
                     }
                     else -> {
-                        Toast.makeText(
-                            this@SignUpActivity,
-                            "회원가입 실패",
-                            Toast.LENGTH_SHORT
-                        ).show()
-                        val intent =
-                            Intent(this@SignUpActivity, SignInActivity::class.java)
-                        intent.putExtra("email", obj["userName"].asString)
-                        setResult(Activity.RESULT_OK, intent)
-                        finish()
-                        Log.d("Connect Failure : ", response.body().toString())
+                        Toast.makeText(this@SignUpActivity, "회원가입 실패", LENGTH_SHORT).show()
                     }
                 }
             }
 
             override fun onFailure(call: Call<Void>, t: Throwable) {
-                Toast.makeText(this@SignUpActivity, "회원가입 실패", Toast.LENGTH_SHORT)
+                Log.d("Register Error", "$t")
+                Toast.makeText(this@SignUpActivity, "회원가입 실패", LENGTH_SHORT)
                     .show()
             }
         })

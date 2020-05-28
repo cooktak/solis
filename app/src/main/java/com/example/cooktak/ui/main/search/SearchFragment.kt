@@ -1,4 +1,4 @@
-package com.example.cooktak.ui.main
+package com.example.cooktak.ui.main.search
 
 import android.os.Bundle
 import android.util.Log

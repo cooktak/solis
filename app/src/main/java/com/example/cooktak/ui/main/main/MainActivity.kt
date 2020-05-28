@@ -1,5 +1,6 @@
-package com.example.cooktak.ui.main
+package com.example.cooktak.ui.main.main
 
+import android.content.Intent
 import android.content.pm.ActivityInfo
 import android.os.Bundle
 import androidx.appcompat.app.ActionBar
@@ -8,7 +9,6 @@ import com.example.cooktak.R
 import com.example.cooktak.adapter.ViewPagerAdapter
 import com.example.cooktak.util.BackPressCloseHandler
 import kotlinx.android.synthetic.main.activity_main.*
-import org.jetbrains.anko.toast
 
 class MainActivity : AppCompatActivity() {
     private lateinit var back: BackPressCloseHandler
@@ -24,7 +24,7 @@ class MainActivity : AppCompatActivity() {
         actionBar.setDisplayShowTitleEnabled(false)
 
         btn_settings.setOnClickListener {
-            toast("Settings")
+            startActivity(Intent(this@MainActivity, OptionActivity::class.java))
         }
 
         back = BackPressCloseHandler(this)

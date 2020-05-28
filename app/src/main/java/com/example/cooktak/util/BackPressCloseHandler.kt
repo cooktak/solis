@@ -5,7 +5,7 @@ import android.widget.Toast
 
 class BackPressCloseHandler(context : Activity) {
     private var backKeyPressedTime: Long = 0
-    private var activity: Activity = context
+    private val activity: Activity = context
 
     fun onBackPressed() {
         if (System.currentTimeMillis() > backKeyPressedTime + 2000) {

@@ -8,6 +8,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Toast
+import android.widget.Toast.LENGTH_SHORT
 import androidx.fragment.app.Fragment
 import com.example.cooktak.R
 import com.google.zxing.integration.android.IntentIntegrator
@@ -23,7 +24,7 @@ class BarcodeFragment : Fragment() {
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        val v = inflater.inflate(R.layout.fragment_barcode, container, false)
+        val v: View = inflater.inflate(R.layout.fragment_barcode, container, false)
 
         v.barcode_layout.setOnClickListener {
             val integrator = IntentIntegrator.forSupportFragment(this)
@@ -43,7 +44,7 @@ class BarcodeFragment : Fragment() {
             val scanResult = IntentIntegrator.parseActivityResult(requestCode, resultCode, data)
             val re = scanResult.contents
             Log.d("onActivityResult", "onActivityResult: .$re")
-            Toast.makeText(this.activity, re, Toast.LENGTH_LONG).show()
+            Toast.makeText(this.activity, re, LENGTH_SHORT).show()
         }
     }
 }

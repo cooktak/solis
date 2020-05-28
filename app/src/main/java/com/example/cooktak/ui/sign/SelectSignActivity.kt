@@ -6,7 +6,7 @@ import android.os.Bundle
 import android.view.animation.AnimationUtils
 import androidx.appcompat.app.AppCompatActivity
 import com.example.cooktak.R
-import com.example.cooktak.ui.main.MainActivity
+import com.example.cooktak.ui.main.main.MainActivity
 import com.example.cooktak.util.BackPressCloseHandler
 import kotlinx.android.synthetic.main.activity_select_sign.*
 

@@ -3,6 +3,9 @@
         xmlns:tools="http://schemas.android.com/tools"
         package="com.example.cooktak">
 
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
     <uses-permission android:name="android.permission.INTERNET" />
 
     <application
@@ -15,6 +18,18 @@
             android:supportsRtl="true"
             android:theme="@style/AppTheme"
             tools:ignore="GoogleAppIndexingWarning">
+        <provider
+                android:name="androidx.core.content.FileProvider"
+                android:authorities="com.example.cooktak.provider"
+                android:exported="false"
+                android:grantUriPermissions="true">
+
+            <meta-data
+                    android:name="android.support.FILE_PROVIDER_PATHS"
+                    android:resource="@xml/provider_paths" />
+        </provider>
+
+        <activity android:name=".ui.main.main.OptionActivity" />
         <activity
                 android:name=".ui.main.community.CreateActivity"
                 tools:ignore="InnerclassSeparator" />
@@ -46,7 +61,7 @@
             </intent-filter>
         </activity>
         <activity
-                android:name=".ui.main.MainActivity"
+                android:name=".ui.main.main.MainActivity"
                 tools:ignore="InnerclassSeparator" />
         <activity
                 android:name=".ui.main.barcode.CustomScannerActivity"

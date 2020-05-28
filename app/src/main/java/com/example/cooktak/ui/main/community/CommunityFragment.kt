@@ -1,7 +1,6 @@
 package com.example.cooktak.ui.main.community
 
 import android.content.Intent
-import android.content.pm.ActivityInfo
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
@@ -9,20 +8,15 @@ import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.LinearLayoutManager
+import com.example.cooktak.R
 import com.example.cooktak.adapter.ExpandableAdapter
 import com.example.cooktak.adapter.GridRecyclerViewAdapter
-import com.example.cooktak.R
 import com.example.cooktak.model.ItemModel
 import com.example.cooktak.model.TitleModel
 import kotlinx.android.synthetic.main.fragment_community.view.*
 
 
 class CommunityFragment : Fragment() {
-
-    override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
-
-    }
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,

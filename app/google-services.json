@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "1042682711859",
+    "firebase_url": "https://cooktak-andrioid.firebaseio.com",
+    "project_id": "cooktak-andrioid",
+    "storage_bucket": "cooktak-andrioid.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1042682711859:android:6c508b30147a23fba9b846",
+        "android_client_info": {
+          "package_name": "com.example.cooktak"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1042682711859-4pc7v4tbomdavvq245pg6l4gca1m8lv4.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.cooktak",
+            "certificate_hash": "9baf4a6cc13cb7e37a34b96e6245f8cd3c634b7c"
+          }
+        },
+        {
+          "client_id": "1042682711859-8aqb2nu0lnvdhdh2k2kmk7sutat4regg.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBd9Hj0xmq8LRpuYEzfZxbqdrKxEZb8eLE"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1042682711859-8aqb2nu0lnvdhdh2k2kmk7sutat4regg.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -38,11 +38,19 @@
     <string name="text_tag_down">추천 태그 ▲</string>
     <string name="text_tag_up">추천 태그 ▼</string>
 
-    <!-- Etc -->
+    <!-- Ted Permission -->
+    <string name="permission_1">[설정] > [권한] 에서 권한을 허용할 수 있습니다.</string>
+    <string name="permission_2">사진 및 파일을 저장하기 위하여 접근 권한이 필요합니다.</string>
+
+    <!-- Barcode -->
     <string name="text_barcode_capture">바코드 촬영</string>
     <string name="text_barcode_info">바코드를 화면 중앙에 맞춰주세요.</string>
+
+    <!-- Pattern -->
+    <string name="special_pattern">[0-9|a-z|A-Z|ㄱ-ㅎ|ㅏ-ㅣ|가-힝]*</string>
+
+    <!-- Etc -->
     <string name="text_start_to_guest">게스트로 시작하려면 터치</string>
     <string name="text_description_logo">logo</string>
     <string name="text_search_result">검색 결과</string>
-
 </resources>

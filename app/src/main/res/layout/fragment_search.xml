@@ -6,7 +6,7 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:theme="@style/Material"
-        tools:context=".ui.main.SearchFragment">
+        tools:context=".ui.main.search.SearchFragment">
 
     <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"

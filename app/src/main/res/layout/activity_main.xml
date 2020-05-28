@@ -5,7 +5,7 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical"
-        tools:context=".ui.main.MainActivity">
+        tools:context=".ui.main.main.MainActivity">
 
     <com.google.android.material.appbar.AppBarLayout
             android:layout_width="match_parent"
@@ -24,7 +24,6 @@
             <FrameLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content">
-
                 <ImageView
                         android:layout_width="40dp"
                         android:layout_height="40dp"
@@ -38,6 +37,7 @@
                         android:layout_height="30dp"
                         android:layout_gravity="end|center_vertical"
                         android:layout_marginEnd="16dp"
+                        android:contentDescription="@string/text_description_logo"
                         android:src="@drawable/ic_settings_black_24dp" />
             </FrameLayout>
         </androidx.appcompat.widget.Toolbar>
